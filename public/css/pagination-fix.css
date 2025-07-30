@@ -1,0 +1,61 @@
+/* Fix for Tailwind pagination */
+
+/* Make SVG icons smaller */
+nav[aria-label="Pagination Navigation"] svg {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+/* Add more spacing between elements */
+nav[aria-label="Pagination Navigation"] .flex.items-center.justify-between {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Improve spacing for the results text */
+nav[aria-label="Pagination Navigation"] .text-sm.text-gray-700 {
+    margin-right: 20px;
+    font-size: 0.85rem;
+}
+
+/* Make sure the pagination container has enough space */
+nav[aria-label="Pagination Navigation"] {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    nav[aria-label="Pagination Navigation"] .flex.justify-between.flex-1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav[aria-label="Pagination Navigation"] .text-sm.text-gray-700 {
+        margin-bottom: 10px;
+    }
+}
+
+/* Fix for the hidden class on small screens */
+@media (min-width: 640px) {
+    nav[aria-label="Pagination Navigation"] .sm\:flex-1 {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+    }
+}
+
+/* Ensure the pagination buttons have proper spacing */
+nav[aria-label="Pagination Navigation"] .inline-flex {
+    gap: 2px;
+}
+
+/* Make the pagination buttons smaller */
+nav[aria-label="Pagination Navigation"] .px-4.py-2,
+nav[aria-label="Pagination Navigation"] .px-2.py-2 {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.85rem !important;
+}
